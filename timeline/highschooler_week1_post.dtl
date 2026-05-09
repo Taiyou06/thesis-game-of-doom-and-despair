@@ -1,0 +1,9 @@
+[style name="bwuh"]
+join HG center neutral
+MC: There we have it! All ready to go.
+HG: Oh. My. Goodness. You're a lifesaver. I'll have to tell everyone about this place!
+MC: Ah- wait, please be careful next time!
+leave HG
+MC: ...and she's gone.
+MC: (will she really be okay..?)
+[signal arg="day_complete"]
