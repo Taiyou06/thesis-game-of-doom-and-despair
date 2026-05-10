@@ -95,8 +95,6 @@ script = ExtResource("1_4jxq7")
 mode = 1
 container_ids = PackedStringArray("1")
 size_mode = 0
-origin_anchor = 3
-pivot_mode = 2
 debug_character_portrait = "speaker"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Anchor/Panel/HBox" unique_id=867463686]
