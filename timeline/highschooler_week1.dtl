@@ -1,4 +1,76 @@
-Random1: [lspeed=0.5]. . .
-[style name="no_portrait"]
-(Today's another slow day, huh?)
-<Empty Text Event>
+[style name="bwuh"]
+MC: ......
+MC: (Today's another slow day, huh?)
+MC: (Well, can't expect customers to come rushing in within the first week.)
+MC: (....)
+MC: (The weather... is nice today...) [pause=0.4]zzz...
+HG: AAAAAAAAH I'M SO SCREWED!!!
+MC: (...?)
+HG: HUH? WHEN DID WE HAVE A REPAIR SHOP HERE?
+MC: (What's that noise?)
+MC: ...[pause=0.3][b]Door opens loudly.[/b]
+join HG center neutral
+HG: HELLO!!! I NEED YOU!
+MC: HUH?! HI, WHAAaaat can I help you with?
+HG: My phone! It's broken!
+HG: You can repair it, right?
+MC: Calm down, please. Let me take a look..
+label diagnose_intro
+MC: So, what's wrong with it?
+HG: It started buzzing and there were so much things I don't know appearing on the screen-
+HG: It was burning hot, I couldn't use it at ALL!
+HG: And all of my school notes are in it- If I lose it now... I'm gonna fail the exam for SURE!!
+MC: What did you do before it happened?
+HG: I don't know! It started going crazy first thing in the morning.
+HG: I thought I could just ignore it for now and ask someone later, BUT!
+HG: The teacher suddenly announced the exam for next week and I haven't studied- a. single. word.
+MC: ...what about the day before?
+HG: Oh! Now that you mention it, there's also that game...
+MC: That game?
+HG: Yeah! My friend suddenly texted me- saying she made a game.
+HG: So she sent me the game for me to try! Isn't that so cool?
+HG: It was getting late though, so I installed it and went to sleep.
+MC: Was this friend... always a developer?
+HG: I had no idea! It was so sudden, I never expected it!
+HG: Isn't she so impressive?
+MC: oh... I see.
+HG: ...?
+label diagnose_choice
+MC: (Based on what she told me, the problem must be...)
+- Malware
+	jump diagnose_correct
+- Bloatware
+	MC: (wait, that isn't quite right...)
+	HG: What's taking so long?
+	set {Global.current_day_score} -= 20
+	[signal arg="wrong_diagnosis"]
+	if {Global.current_day_score} <= 0:
+		jump diagnose_failed
+	jump diagnose_choice
+- System Failure
+	MC: (wait, that isn't quite right...)
+	HG: Please hurry up!
+	set {Global.current_day_score} -= 20
+	[signal arg="wrong_diagnosis"]
+	if {Global.current_day_score} <= 0:
+		jump diagnose_failed
+	jump diagnose_choice
+label diagnose_failed
+HG: Uhm... you look like you're having a hard time.
+HG: Can I have my phone back for now?
+MC: Right... I'm sorry.
+leave HG
+[signal arg="day_failed"]
+jump timeline_end
+label diagnose_correct
+MC: Seems like your phone got infected with a virus.
+MC: Your friend probably got hacked, and you were sent the "game" by the hacker.
+HG: What?! No way... she got hacked?
+HG: Can you fix it?
+MC: Normally, you'd have to reset your phone to make sure it's safe...
+HG: What? NO!! Please, anything but that! I really need my school notes.
+MC: Luckily, I have a tool I've been developing for this exact situation.
+MC: Don't worry, I'll make sure you can access your notes again.
+HG: Really?! Please make it work!
+[signal arg="start_malware_puzzle"]
+label timeline_end

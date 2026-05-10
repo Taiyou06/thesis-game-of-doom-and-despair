@@ -1,0 +1,747 @@
+main
+In depth documentation of how I plan to cook myself alive
+To-do list: John list
+
+Summary:
+
+PREMISE:
+A short game where you play as a guy in a tech repair shop helping people with their tech problems.
+
+DEVELOPMENT DETAILS:
+
+Game engine: Godot 4.6.2 - stable
+Version Control / Data Backup: GitHub (public repo), VScode 
+Art style: Animated 2D, Pixel-art, Cartoony/Anime ish (somewhat inspired by this youtube channel)
+Art software: Aseprite, maybe Krita
+
+Music/Sound: some free assets on itch.io
+
+Game Platform: PC
+
+RULES/RESTRICTIONS:
+
+Goal: 
+show the importance of data, privacy, and digital security.
+
+It also needs to be FUN obviously.
+The virus removing/repairing part is NOT the point. No need to make it accurate. So go wild in this part and focus on making an enjoyable gameloop.
+
+
+Contents/To-do:
+
+Gameplay:
+A week is a “stage”, each week has 3-5 work days
+
+Each day someone will come in, and convo starts which then lead to the puzzle, or multiple if later difficulties = multiple problems in one device
+
+The day starts with full score value (E.g. 100.000)
+Then whenever the player makes a mistake it gets reduced by like idk 15-20% ish?
+When it reaches 0 the client just leaves and no score lol.The quota is tallied per-week so theoretically u can save a bad day by doing really well in another.
+
+(players *must* clear special npc stages to advance, failing will require them to retry before they can do the next stages)
+
+Core gameplay:
+
+Phase 1: Finding the virus
+
+When the diagnosis starts, the player gets to ask these questions and depending on the answers, they’ll have to guess which problem they’re facing.Getting it wrong will reduce score.
+
+- What happened to it?
+- What’s the problem?
+Keyword
+Clue type
+It feels slow/ crashes.
+Bloat/Malware/System Failure
+Ads keep popping up/ It does things on its own.
+Malware
+It won’t turn on/ is stuck/ turns off on its own
+System failure/Malware
+It’s abnormally hot/ the fans are really loud
+Bloat/Malware/System Failure
+
+- What were you doing before it happened?
+- When did it start?
+Keyword
+Clue type
+Installed a new game/application
+Bloat/Malware
+There was a system update
+System failure
+I changed some settings/removed files I don’t really understand
+System failure
+
+(these aren’t the actual dialogue, just the base)(which means for the regular/faceless npcs I’ll have to write like multiple dialogue templates ayaya)
+
+
+Phase 2: Actually fixing it
+
+It’ll be a minigame confined within the screen of whatever the device ur fixing.
+
+I’m so lost idk what the minigames should be
+I guess puzzles??
+
+Rules for minigame design:
+There needs to be a way to fail or at least lose some score.
+
+Minigame for malware
+Idea 1: spot the fake file
+
+A bunch of file icons float around and you have to click the bad file multiple times within the time limit. Clicking and destroying normal files deducts your point.
+
+How to identify the bad file?It will move a little differently (jittery) and it will MULTIPLY itself over time.
+
+Maybe there’s a scan button that reveals all the bad files temporarily?
+
+Idea 2: touhou fr
+There’s a radar where malware will get detected and show up on screen, then when you click on it you enter a bullet hell minigame
+
+Probably just one or two at a time but make the bullet hell harder on later weeks
+
+Probably give the player multiple lives in the bullet hell and only reduce points if they lose all of them. Or make the danmaku oneshot but the pattern easy.
+Patterns are probably simple, like junko if she wasn’t trying to kill u.
+
+Inb4 PDH :tf:
+
+Idea 3 : Top Down Maze Shooter
+Move the cursor around some black pixelated bloats of viruses
+There will be 5 total checkpoints whereas when the cursor reaches that area, you have to defend the area by shooting the virus down. You have to defend it for like 2-3 seconds. If you manage to protect the checkpoints, you will have a chance to get a buff.
+Each checkpoint represent antivirus or the player is destroying the malware files.
+Minigame for Bloat
+Idea 1 : Tinder:™:
+So there’s a number of apps/files the player goes thru and swipe
+Swipe right to keep and left to delete.
+Maybe in the subsequent weeks this minigame just have more stuff to go through so like:Week 1: 10-15Week 2: 20-25
+Etc
+Keeping useless/malicious stuff and deleting important stuff deducts points.
+
+Might require additional dialogue with the npc to decide if a certain file/app is needed? Like a “ask about this” button if the player is unsure what to do.
+
+Minigame for System
+Idea1: Timing minigame?Think like Undertale/deltarune’s attack system butThere’s multiple lines with different timings that you have to do from top to bottom subsequently.
+
+Obviously reduced points if you miss the timing.
+
+Idea2: 
+
+More dialogue with the npc but this time to determine the exact time the update/changes were made so the player can revert it.
+
+
+
+Glorp glob glurt gloink
+
+
+
+
+
+stuff from the paper
+Chapter 1 and 2 isn’t rlly important
+A lot of these are actually already written in the main tab as well.
+3. DESIGN CONCEPT
+3.1.
+Creative Concept
+3.1.1.
+Creative Objectives
+The creative objective of this design is to create a digital game to communicate the importance of digital literacy in the online world for Generation Z, aged 18-22. Beyond serving as entertainment, this game acts as a reminder for players to remain vigilant during online interactions and to take steps to protect themselves.
+3.1.2.
+Creative Strategy
+3.1.2.1. Topic and Theme 
+The topic and theme of this design is a roleplay game where the player acts as the owner of a computer and mobile phone repair shop. By placing the player directly in contact with digital devices and their owners, the theme of digital literacy becomes more relevant within the gameplay. Furthermore, the game provides a challenge by using interaction between the player and characters to solve problems.
+3.1.2.2. Target Audience
+Demographic: Ages 18-22, male and female.
+Geographic: Living in urban areas in Indonesia. (game is still in english dw)
+Psychographic: Possess a sense of curiosity and an interest in digital media.
+Behavior: Enjoy playing games, frequently use computers and mobile phones, and are active on social media.
+Technographic: Capable of operating computers and mobile phones for communication and information retrieval.
+3.1.2.3. Visual Concept 
+This digital game design will utilize a 2D visual approach with a pixel art style. This style is closely tied to the history of computer and digital game development and remains relevant today. Additionally, this style provides a playful and simple impression.
+
+3.1.3.
+Primary Media
+3.1.3.1.
+Design Concept
+This design uses digital game media on a Windows-based desktop platform. The core gameplay loop involves interacting with characters and solving puzzles to repair their devices. Through these interactions, players are encouraged to read client dialogues carefully to identify vulnerabilities caused by careless digital behavior. These vulnerabilities may include clicking links without verifying authenticity or downloading files from unknown sources.
+3.1.3.2.
+Design Title
+The title for this game is Troubleshooter. The term "troubleshoot" refers to the act of finding the source of a problem and solving it, a term frequently used in the context of computers and technology.
+3.1.3.3.
+Game Contents
+a. Menu Content
+Start: Begin the game.
+Settings: Game configurations.
+Quit: Exit the game.
+b. Core Gameplay
+Diagnosis: Players must converse with device owners to understand the issue. Client dialogues serve as clues to unlock specific puzzle options. Players must determine the type of problem; choosing incorrectly results in a payment penalty.
+Bloat: Unnecessary applications running simultaneously. Unlike malware, bloat does not necessarily aim to steal data or damage the machine.
+Malware: Dangerous code or applications attached to the device.
+System Failure: System errors usually caused by updates or user-made changes.
+Puzzle Solving: After a correct diagnosis, players solve a themed puzzle: Cleanup for bloat, Scan and Remove for malware, and System Revert for system failure.
+Payment: A points system (starting at a default of 100) that tracks performance. Points are deducted for errors. At the end of the in-game week, the total is displayed to the player.
+Through these phases, players are introduced to vital digital security terms and learn the consequences of unsafe digital habits.
+c. Rules
+Each "day" lasts 3-4 minutes.
+Mistakes during puzzles reduce payment.
+If time or payment runs out, the day is failed, and no payment is received.
+Successful completion awards the remaining payment as the final score for that day.
+d. flowchart
+
+3.1.3.4.
+Interactive Technicality
+Mouse: Used for direct interaction with the computer or phone to solve puzzles.
+Keyboard: Used for dialogue interactions with characters.
+3.1.3.5.
+User Interface
+a. Color Composition The design uses a simple and colorful palette to match the pixel art style, maintaining minimalist details. 
+
+Tbh there’s no real stylization with the colors so it’s whatever. Doesn’t have to follow this palette it’s just there to make the paper look more “detailed”
+
+b. Typography
+Dialogue: Abaddon font. (attribution not necessary)
+Core Gameplay: m6x11 font. (needs attribution)
+Both are pixel sans-serif fonts chosen for readability and neatness. Both are from itch.io
+c. Illustration Style The game uses a Japanese illustration style common in anime and manga, which is popular and flexible for Generation Z.
+Characters: Designed based on personality and daily life, using age-appropriate and occupation-specific clothing references.
+Environment: The primary environment consists of the desktop backgrounds of the various clients' computers or phones.
+
+Characters
+MC (Player):
+
+Just a nerd who has a tool with very convenient GUI (the minigames)
+
+Special NPCS:
+These are like the clients that may or may not appear more than once and has a story with a lesson attached to it.
+
+The Highschool Girl:
+ John Gyaru
+Despite her extravagant, intimidating look, she is probably the nicest teenage girl you can find around the area. In fact, she is nice to the point of being extremely naive. Thanks to her strong desire to be cheerful and kind to everyone she encounters, she usually can’t tell when someone is deceiving her. 
+
+Main lesson: (how to avoid) Social engineering 
+
+Week1 Problem:
+Downloaded malware from a friend whose account was hacked.
+
+Week 2 problem:
+Maybe she brings that friend over?
+
+
+The Office Worker:
+Handsome men 😋
+
+Usually comes in the evening, this man is an office worker. The type that sits in front of the office computer 9-5. He constantly looks tired but still treats people with due respect.
+
+Main lesson: data backup and password hygiene
+
+Week 2 problem:
+Got a bunch of bloat that risked his (low spec) work laptop and made it barely usable
+Uses the same password for EVERYTHING.
+
+
+kid :
+
+Always comes in alone, doesn’t seem very sociable, but he loves video games... to the point that he infected his laptop multiple times trying to get free games
+Main lesson: Just don’t download/follow random shiz online man 🥀
+Week 1 Problem:
+Laptop dying cuz he tampered with settings following random shortform optimization tutorials.
+
+Week 2 Problem: 
+The same laptop got infected because he didn’t want to be left out by other kids who are playing a newly released game, and he ended up trying to pirate it.
+Would be funny if this game was actually free
+Highschool girl
+
+Week 1 encounter:
+
+MC: ..... 
+
+(Today’s another slow day, huh?)
+(Well, can’t expect customers to come rushing in within the first week.)
+(....)
+(The weather... is nice today... zzz)
+
+AAAAAAAAH I’M SO SCREWED!!!
+
+(...?)
+
+HUH? WHEN DID WE HAVE A REPAIR SHOP HERE?
+
+(What’s that noise?)
+
+[Door opens loudly]
+
+HG: HELLO!!! I NEED YOU!
+
+MC: [jolted awake] HUH?! HI, WHAAaaat can I help you with?
+
+HG: My phone! It’s broken! 
+You can repair it, right?
+
+MC: Calm down, please. Let me take a look..
+
+—------------------------------------—Gameplay bit starts—------------------------------------
+
+MC: So, what's wrong with it?
+
+HG: It started buzzing and there were so much things I don’t know appearing on the screen- It was burning hot, I couldn’t use it at ALL!And all of my school notes are in it-If I lose it now... I’m gonna fail the exam for SURE!!
+
+MC: What did you do before it happened?
+
+HG: I don’t know! It started going crazy first thing in the morning.I thought I could just ignore it for now and ask someone later, BUT!The teacher suddenly announced the exam for next week and I haven’t studied- a. single. word.
+MC: what about the day before?
+
+HG: Oh! Now that you mention it, there’s also that game...
+
+MC: That game?
+
+HG: Yeah! My friend suddenly texted me- saying she made a game.So she sent me the game for me to try! Isn’t that so cool?It was getting late though, so I installed it and went to sleep.
+
+MC: Was this friend... always a developer?
+
+HG: I had no idea! It was so sudden, I never expected it!Isn’t she so impressive?
+
+MC: oh... I see.
+
+HG: ...?
+
+(Based on what she told me, the problem must be...)
+[Malware]
+
+If player gets it wrong:
+(wait, that isn’t quite right...)
+HG: What's taking so long?ORPlease hurry up!
+
+MC: Seems like your phone got infected with a virus. Your friend probably got hacked and you were sent the “game” by the hacker.
+
+HG: What?! No way... she got hacked?Can you fix it?
+
+MC: Normally, you’d have to reset your phone to make sure it’s safe...
+
+HG: What? NO!! Please, anything but that! I really need my school notes.
+
+MC: Luckily, I have a tool I’ve been developing for this exact situation.Don’t worry, I’ll make sure you can access your notes again.
+
+HG: Really?! Please make it work!
+
+[Puzzle - Malware]
+
+MC: There we have it! All ready to go.
+HG: Oh. My. Goodness. You’re a lifesaver. I’ll have to tell everyone about this place!
+
+[Dashes off]
+
+MC: Ah- wait, please be careful next time! 
+
+and she’s gone.
+
+(will she really be okay..?)
+
+IF THE PLAYER RUNS OUT OF SCORE:
+
+HG: Uhm... you look like you’re having a hard time.
+Can I have my phone back for now? 
+
+MC: Right... I’m sorry.
+
+Week 2 encounter:
+
+MC: ......
+
+(What a nice day...)
+
+(Not to mention my reputation has gone up and people are starting to come here more often.)
+MC: I think I can afford to relax a little bit after all that hard work.. *yawn*
+....zz
+
+Ah! W-wait! I can’t keep up!
+
+(...?)
+
+Come on! The place is right there!
+
+(I sense a feeling of deja vu...)
+
+[Door opens loudly]
+
+HG: Hiya! I’m back! And I brought my friend!
+
+HG2: h-hello...
+
+MC: And there she is.
+
+HG: She’s the friend from last time! When she found out about the phone, she immediately turned it off and now she’s too scared to turn it on again...
+
+HG2: She’s right.... I heard you m-managed to fix her phone.. Can you please fix mine too?
+
+MC: No problem! 
+
+—------------------------------------—Gameplay bit starts—------------------------------------
+
+MC: So, your phone probably had the same problem that your friend got, since she got it from you.
+
+HG2: You’re right... I panicked and turned my phone off. b-but I didn’t realize it would spread to her until it was too late...
+
+HG: You wouldn’t believe how many times she apologized to me.
+
+HG2: I’m sorry...
+
+HG: Ah! You did it again!
+
+HG2: ah! .....
+
+MC: Anyway, this shouldn’t be too hard to handle.It won’t take long.
+
+[tries to turn on the phone]
+.....
+.....
+!!!
+
+[the phone is crashing out and going sicko mode (flickers and flashing)]
+
+HG2: huh...? W-what’s happening?
+
+HG: woah! Your phone is going even crazier than mine did when I brought it here.
+
+MC: hmm... we might have more than one problem.
+
+MC: Do you remember doing anything before turning off the phone?
+
+HG2: uhm... I was panicking really badly when it happened, so I tried tapping around the phone to make it stop...
+I might have accidentally pressed a setting or two...
+MC: I see, that might just explain what’s happening.
+
+(The problem here has to be...)
+
+[System failure]
+
+If player gets it wrong:
+(wait, that can’t be it...)
+HG2: *scared noises*
+
+MC: I’m guessing that whatever settings you changed, combined with this malware, caused the flickering and glitching.
+
+MC: I’ll have to try a few things to be sure.
+
+HG: Don’t worry, he’s got this in the bag.
+
+HG2: T-then, I’ll leave it to you..
+
+[Puzzle - System]
+[Puzzle - Malware]
+
+MC: Phew. That took longer than expected.
+Here you go!
+
+HG2: Thank goodness...
+
+MC: And this time, before you run off again..
+
+HG: eh?
+MC: Please be careful when talking to people online.Before clicking links you should always check for misspelling, and don’t download from sources you don’t know already.And if something sounds too good to be true, it usually is. So be extra vigilant when it comes to these kinds of things.
+[ MC goes on for a long lecture ]
+
+MC: And one last thing, There’s a good chance the malware had access to your accounts so you two should change your passwords as soon as possible.
+HG2: ah... actually, I helped her change hers after she told me about her phone.
+HG: That’s right! She understands these kinds of things better than me!
+
+MC: oh, that’s great! It's very reassuring to know she has a friend like you.Then I trust you to take care of your own accounts, too.
+
+HG2: ah- t-thank you...
+
+IF THE PLAYER RUNS OUT OF SCORE:
+
+HG 2: A-Are you okay? I can come back another time if you can’t do it now...
+Little kid
+Week 1 encounter:
+
+MC: There we are, all set and ready for customers.
+Now I can relax a little...
+
+(Doorbell jingles)
+
+MC: Oh, that was quick.
+Welcome, how can I...Huh?
+MC: (I could’ve sworn I heard the door open, but I don’t see anyon-)
+
+Mister...
+
+MC: Eek!!!!!! (super scared face cuz bro fr thought his store is haunted less than a week after opening)
+
+I’m down here.
+
+MC: ...... oh.(It’s just a kid...)Goodness, I didn’t see you at all! I’m sooo sorry.How can I help you?
+
+LK: My laptop.. It’s broken..
+
+MC: Hmmm, let me see...
+
+—------------------------------------—Gameplay bit starts—------------------------------------
+
+MC: Which part of it is “broken”?
+
+LK: Sometimes it turns off on its own, and the fans have gotten really loud...
+I’m too scared to play any games on it.
+
+MC: Is that so...
+
+LK: Can you fix it, mister?
+
+MC: When did it start being like this? Did you do anything in particular?
+
+LK: uhm... I...
+...
+MC: ..?
+LK: ... I’m sorry... it started being like that when I wanted to play a game, but it was really slow....
+
+LK: Then I looked up how to make it faster... and followed a tutorial...
+
+MC: What did the tutorial say?
+
+LK: I don’t remember...
+
+MC: Huh?
+
+LK: I went and changed some settings but I can’t remember what I changed...
+I tried to fix it myself but I couldn’t...
+
+MC: Hey, it’s okay. Please don’t cry...
+I’ll fix it for you, so cheer up!
+
+LK: ...really?
+
+Thank you, mister...
+
+(From what he said, the problem would be...)
+
+[System failure]
+
+If player gets it wrong:
+(wait, that can’t be it...)
+HG: Mister..?
+
+MC: Don’t worry, all we have to do is undo the changes you made before it started having problems.
+
+Just wait a little bit, alright?
+
+LK: Okay.
+
+(Alright, should be easy enough)
+
+[Puzzle - System]
+
+MC: And done!
+Here you go.
+
+LK: It... it’s back to normal...
+Thank you...mister!
+
+MC: If you really wanted to play that game, you should ask your parents and save up money for a better machine. A lot of these videos online are often unhelpful and some are bad people trying to hack you. 
+
+LK: ?!
+
+MC: You got lucky this time, but if you keep doing these things, you might run into a bigger problem.
+
+LK: ...
+
+(Was I too harsh?)
+
+MC: sorry, didn’t mean to lecture you. Just be more careful in the future, alright?
+
+LK: ...okay.
+
+[leaves money on the counter and exits]
+
+MC: ...ah geez.
+
+IF THE PLAYER RUNS OUT OF SCORE:
+
+LK: Mister... it’s getting late... I have to go back. Can I have my laptop back?
+
+(Shoot! I can’t believe something like this tripped me up.)
+Office worker
+Week 1 encounter:
+
+MC: Alright! Yet another good day.I should prepare to close for today...
+
+[Doorbell rings]
+
+OW: Hello, is this the computer repair shop?I’m sorry for coming in at such a late hour, I just got off work and this is the only time I have to come here...
+
+MC: Oh, that’s alright. Thank you for coming.(there goes my free time...)(but this man seems really tired, I should help him out)
+
+OW: There seems to be a problem with my work laptop.
+
+—------------------------------------—Gameplay bit starts—------------------------------------
+
+MC: What’s the issue?
+
+OW: Lately... whenever I try to get some work done on my laptop, I keep finding myself swamped by these notifications and ads.
+
+It has gotten so bad that I can’t get anything done nowadays. That’s when I overheard my co-workers talking about this place.
+
+MC: (M-hmmm~ good job, people. Keep spreading the word~)
+
+MC: Well, you’re at the right place. I can get rid of those for you.
+
+OW: You have my utmost gratitude.
+
+MC: Do you remember doing anything before this started? Like installing something?
+
+OW: Hmm, let’s see... there was a program that I had to install for work.After I started using it, I noticed a decrease in my laptop performance.But I didn’t think much of it, until there was an advertisement for a program that cleans the computer and makes it run faster.I thought it’d be helpful, but it only got worse from then...
+
+
+(I see now, the problem is...)
+
+[Bloatware]
+
+If player gets it wrong:
+(wait, that isn’t quite right...)
+OW: Is there something wrong?
+
+MC: (The initial work program’s installer must’ve had those extra useless startup programs added into the package.)(for the cleaning tools... those are adware...)(Forget cleaning, these apps are making it  worse...)
+
+MC: Alright, all I have to do then is remove the bloat.
+
+OW: Will it take long?
+
+MC: Not at all! It’s an easy fix, don’t worry.
+
+OW: That puts me at ease, thank you.
+
+[ Puzzle - Bloat ] 
+
+MC: All clean!
+
+OW: Is it done?
+
+MC: Yep! It should be good to go.
+
+OW: Amazing.. You fixed it efficiently. I had my doubts since this is a new place but it seems like my worry was unfounded.
+
+MC: hehe~ thank you.
+Ah- but. Next time, please don’t install “cleaner” applications that you see from advertisements.
+
+More often than not, they are malicious apps that will give you ads and lead you to scam sites.
+
+OW: Is that how it is... it seems like I am a bit out of touch with things nowadays.
+Thank you for the kind warning.
+
+OW: I’ll leave now, thank you for helping me in your off-hours.
+
+MC: No problem at all. 
+
+IF THE PLAYER RUNS OUT OF SCORE:
+
+OW: Are you not finished yet? I’m sorry but unfortunately, I need to hurry home.
+
+I may return another time.
+Template dialogues
+Template dialogue for regular npcs
+Tags are like the possible association with those sentences
+
+Talking about the problem:
+
+Phone:—-------------------------------
+“The whole thing feels sluggish. It’s overheating in my pocket even when I’m not using it, and the camera app takes about ten seconds just to open. It was perfectly fine yesterday!” Malware System
+
+"My storage says it’s completely full, but I only have like fifty photos. There’s something called 'Other Data' taking up 60GB."  Bloat  System 
+
+"I keep getting notifications that 'Google Play Services has stopped' every five seconds, and I can't even get into my settings to fix it."  System 
+
+PC:
+—--------------------------------
+“Every time I open a browser—doesn't matter which one—I get these aggressive 'System Alert' telling me I have 43 viruses.”  Malware 
+
+“It takes ten minutes just to reach the login screen. The whole computer just freezes for the first quarter-hour of my day.”  Bloat Malware
+
+“The laptop is burning hot to the touch near the hinges, and the battery drains from 100% to 10% in about forty minutes of just answering emails."  Malware  System  Bloat 
+
+“I keep getting these blue screens with a 'Critical Process Died' error every twenty minutes. It’s completely unpredictable."  System 
+
+
+
+Talking about how it happened:
+
+Phone:
+—---------------------------
+
+"I downloaded one of those 'Battery Saver' apps because my phone was getting old, but now the app itself is the only thing running." 
+"I was browsing a streaming site to watch a movie, and I had to click 'Allow' on a few permissions just to get the video player to work."
+
+
+PC:
+—--------------------------------  Malware System
+
+
+
+
+
+
+
+
+
+
+
+
+Funni npc idea which are not special npcs but interesting enough even without having faces:
+
+Some noble guy from the medieval era adapting to modern society after reincarnating/isekai’d to regular ass world. Speaks with fancy lingo
+Current list of problems
+Need to figure out the project window scaling especially cuz pixel texel bullshi and the fonts are becoming wonky, IDK if this is a resolution scaling problem or a dialogic problem..
+
+I need better ideas for the solving part
+
+Of course I decided I should take on a whole other project in the midst of this... why am I like this (paid tho)
+Technical details
+FORMAT (FIXED)
+
+Game size in engine: 1280x720 (so dialogic doesn’t shit itself)
+Art Main canvas size : 640x360 (upscaled 2x in engine), .png
+Animation must be exported as a .png spritesheet
+
+Fonts:
+
+Abaddon Light, Bold
+
+m3x6, m5x7, m6x11
+
+(Actual) Color palette:
+Main building:
+
+
+Style guide:
+
+
+Main Menu 
+
+rough layout (640x360)
+
+Thicker font: m6x11 (16pt)
+Thin font: abaddon light (16pt)
+(download from itch.io)
+
+Idea: Storefront tempat servis 
+Wall: Cream/pastel orange (but idk if it looks weird with the logo) (idk the exact hexcode, not a “must”, u do whatever feels right)  
+color palette is colorful n whimsy n shi, jgn terlalu realistic.
+Glass door with white frame.
+ idk what the road should look like as well, doesn't have to be bricks
+
+< Reference/ idea for front decorations (to fill the empty spots (crates, cables, plants, etc)
+
+When player presses new game/continue, door opens with door opening and bell sound (like in shops with those doorbell thingie)
+
+Need to layout (and design/polish):- New game n continue button
+- Settings/Credits/Exit buttons
+
+Export buttons and background separately + make sure the exported png size is appropriate (no large blank space)
+
+Level Selection
+
+Rough layout
+
+Background details
+Wall color ngikut wall color bagian dpn, character pose ga harus persis reference image, yang penting si MC ada di situ.
+
+
+Menu details
+X leads back to main menu
+The box next to the days keeps track of level status, such as cleared/uncleared/failed
+selected/hovered days has the arrow pointing at it + the slightly darker outline
+they are exported gray so it can be easily adjusted via modulation in engine
+Green modulation for clears, red for fails, dark gray/blue for uncleared. Exact color to be defined as we go.
